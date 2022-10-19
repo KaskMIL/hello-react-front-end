@@ -13,16 +13,9 @@ export const getGreetingApi = () => async (dispatch) => {
     },
   });
   const apiData = await response.json();
-  const setData = apiData.map((greet) => {
-    const greetData = {
-      greet_id: greet.id,
-      greet: greet.greet,
-    };
-    return greetData;
-  });
   dispatch({
     type: GETGREETING,
-    payload: setData,
+    payload: apiData,
   });
 };
 
