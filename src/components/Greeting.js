@@ -5,15 +5,15 @@ import { getGreetingApi } from '../redux/greetingReducer';
 function Greeting() {
   const greet = useSelector((state) => state.greet);
   const dispatch = useDispatch();
-  return(
+  return (
     <div>
       <h1>Greeting Generator!</h1>
-      <button onClick={() => dispatch(getGreetingApi())}>Generate Greeting</button>
+      <button type="button" onClick={() => dispatch(getGreetingApi())}>Generate Greeting</button>
       {greet ? (
         <h2>{greet.greet}</h2>
       ) : null}
     </div>
-  )
+  );
 }
 
 export default Greeting;

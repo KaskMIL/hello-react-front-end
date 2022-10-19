@@ -2,7 +2,7 @@
 const url = 'http://[::1]:3000/api/v1/greeting';
 
 // Action
-const GETGREETING = 'http://[::1]:3000/api/v1/greeting/GET_GREETING'
+const GETGREETING = 'http://[::1]:3000/api/v1/greeting/GET_GREETING';
 
 // Action creator
 export const getGreetingApi = () => async (dispatch) => {
@@ -25,5 +25,5 @@ export default function greetingReducer(state = [], action) {
       return action.payload;
     default:
       return state;
-  };
+  }
 }
