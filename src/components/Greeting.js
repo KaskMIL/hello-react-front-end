@@ -7,8 +7,11 @@ function Greeting() {
   const dispatch = useDispatch();
   return(
     <div>
-      <h1>Hello World! from greeting component</h1>
-      <button onClick={() => dispatch(getGreetingApi())}>Generate random Greeting!</button>
+      <h1>Greeting Generator!</h1>
+      <button onClick={() => dispatch(getGreetingApi())}>Generate Greeting</button>
+      {greet ? (
+        <h2>{greet.greet}</h2>
+      ) : null}
     </div>
   )
 }
